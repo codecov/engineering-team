@@ -1,0 +1,21 @@
+on:
+  workflow_dispatch: {}
+  schedule:
+    # Runs "at 05:00, only on Friday" (see https://crontab.guru)
+    - cron: '0 5 * * 5'
+
+jobs:
+  move-to-next-iteration:
+    name: Move to next iteration
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: blombard/move-to-next-iteration@master
+        with:
+          owner: codecov
+          number: 25
+          token: ${{ secrets.PAT_TOKEN }}
+          iteration-field: Sprint
+          iteration: last
+          new-iteration: current
+          statuses: Todo,In Progress,In Review,Merged
