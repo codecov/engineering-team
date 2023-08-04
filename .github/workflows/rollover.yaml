@@ -13,7 +13,16 @@ jobs:
       - uses: blombard/move-to-next-iteration@master
         with:
           owner: codecov
-          number: 25
+          number: 25 # Platform
+          token: ${{ secrets.PAT_TOKEN }}
+          iteration-field: Sprint
+          iteration: last
+          new-iteration: current
+          statuses: Todo,In Progress,In Review,Merged
+      - uses: blombard/move-to-next-iteration@master
+        with:
+          owner: codecov
+          number: 31 # Applications
           token: ${{ secrets.PAT_TOKEN }}
           iteration-field: Sprint
           iteration: last
