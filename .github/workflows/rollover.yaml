@@ -28,3 +28,12 @@ jobs:
           iteration: last
           new-iteration: current
           statuses: Todo,In Progress,In Review,Merged
+      - uses: blombard/move-to-next-iteration@master
+        with:
+          owner: codecov
+          number: 36 # Design
+          token: ${{ secrets.PAT_TOKEN }}
+          iteration-field: Sprint
+          iteration: last
+          new-iteration: current
+          statuses: Todo,In Progress,User Research,In Review,Merged
