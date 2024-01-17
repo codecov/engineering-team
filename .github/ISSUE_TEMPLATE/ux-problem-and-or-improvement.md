@@ -1,6 +1,6 @@
 ---
 name: UX problem and/or improvement
-about: Use this template for reporting or suggesting UX improvements or problems.
+about: Use this template for reporting or suggesting UX improvements or problems
 title: "<Enter Title for Problem and/or Improvement>"
 labels: in discovery
 assignees: Adal3n3, codecovdesign
