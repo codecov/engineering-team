@@ -3,7 +3,7 @@ on:
   schedule:
     - cron: '0 14 * * 4'
     - cron: '0 15 * * 4'
-
+name: Rollover Platform Sprint
 jobs:
   move-to-next-iteration:
     name: Move to next iteration
